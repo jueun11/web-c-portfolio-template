@@ -1,0 +1,66 @@
+
+#root {
+  width:100vw;
+}
+
+
+#root>section {
+  width: 100vw;
+  height:100vh;
+  background-color: #222;
+}
+
+/* section children */
+#root>section>div {
+  width:inherit;
+  height:inherit;
+  position: relative;
+  border: 1px solid red;
+}
+
+
+/* section 1 */
+#root>section>div:nth-child(1) {
+  padding:5vw;
+  position:absolute;
+  display:flex;
+  justify-self: flex-start;
+  align-items: center;
+  z-index:1;
+}
+#root>section>div:nth-child(2) {
+  /* 이미지 넣을자리 */
+  width:100vw;
+  height:100vh;
+  background-color: var(--bg-col-333);
+  /* 밑에깔려있음 */
+  z-index:0;
+  overflow: hidden;
+}
+
+#root>section>div:nth-child(1) > div {
+  padding:20px;
+  top: 20px;
+  right: 20px;
+  position:fixed;
+}
+
+/* 점 세개 */
+#root>section>div:nth-child(1) > div > div {
+  margin:10px;
+  width:10px;
+  height:10px;
+  background-color:var(--col-ccc);
+}
+
+/* main title */
+#root>section>div:nth-child(1) > h1 {
+  font-size:5rem;
+}
+
+/* ************************** */
+#root>section>div:nth-child(2) > img {
+  transition:1s;
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+}
